@@ -1,5 +1,9 @@
+import styles from '../styles/Footer.module.css'
+
 export default function Footer(){
     return(
-        <p>Curso de Next</p>
+        <div className={styles.footer}>
+        <p>Curso de Next &copy;</p>
+        </div>
     )
 }
