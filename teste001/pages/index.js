@@ -10,10 +10,15 @@ export default function Home() {
       <Head>
         <title>Home</title>
       </Head>
-
       <div className={styles.container}>
-      <h1>Página inicial</h1>
-    </div>
+        <h1 className={styles.title}>Página inicial</h1>
+      </div>
+      <Image 
+        src="/images/city.jpg"
+        width="300px"
+        height="400px"
+        alt='cidade na noite'
+      />
     </>
   )
 }
