@@ -13,6 +13,25 @@ export async function getStaticProps(context){
     }
 }
 
+export async function getStaticPaths (){
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/`)
+
+    const data = await response.json()
+
+    const paths = data.map((todo) =>{
+        return {
+            params: {
+                todoId: `${todo.id}`,
+            },
+        }
+    })
+
+    return{
+        paths,
+        fallback:false,
+    }
+}
+
 export default function Todo({ todo }){
 
     const router = useRouter()
